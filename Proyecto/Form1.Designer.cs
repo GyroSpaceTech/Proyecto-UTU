@@ -29,9 +29,13 @@ namespace Proyecto
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu1));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pnlAnuncio2 = new System.Windows.Forms.Panel();
+            this.pnlAnuncio1 = new System.Windows.Forms.Panel();
+            this.tmrAnuncios = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -58,16 +62,35 @@ namespace Proyecto
             this.label2.TabIndex = 1;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // pnlAnuncio2
+            // 
+            this.pnlAnuncio2.BackColor = System.Drawing.Color.Transparent;
+            this.pnlAnuncio2.Location = new System.Drawing.Point(12, 9);
+            this.pnlAnuncio2.Name = "pnlAnuncio2";
+            this.pnlAnuncio2.Size = new System.Drawing.Size(185, 429);
+            this.pnlAnuncio2.TabIndex = 2;
+            // 
+            // pnlAnuncio1
+            // 
+            this.pnlAnuncio1.BackColor = System.Drawing.Color.Transparent;
+            this.pnlAnuncio1.Location = new System.Drawing.Point(613, 9);
+            this.pnlAnuncio1.Name = "pnlAnuncio1";
+            this.pnlAnuncio1.Size = new System.Drawing.Size(185, 429);
+            this.pnlAnuncio1.TabIndex = 3;
+            this.pnlAnuncio1.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAnuncio1_Paint);
+            // 
             // Menu1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pnlAnuncio1);
+            this.Controls.Add(this.pnlAnuncio2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Menu1";
-            this.Text = "Cerrar";
+            this.Text = "CorePoint:Inicio";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -78,6 +101,9 @@ namespace Proyecto
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlAnuncio2;
+        private System.Windows.Forms.Panel pnlAnuncio1;
+        private System.Windows.Forms.Timer tmrAnuncios;
     }
 }
 
